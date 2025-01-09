@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şubeler</title>
+    <link rel="stylesheet" href="../css/subeler.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="adminPanel.html">
+                    <img src="../images/avisLogoWhite.png" alt="avisLogo">
+                </a>
+            </div>
+            <div class="logout">
+                <a href="adminGiris.html">Çıkış Yap</a>
+            </div>
+        </div>
+        <div class="navbar">
+            <ul class="navbar-items">
+                <a href="adminPanel.html">
+                    <li class="navbar-item">Anasayfa</li>
+                </a>
+                <a href="subeler.html">
+                    <li class="navbar-item">Şubeler</li>
+                </a>
+                <a href="araclar.html">
+                    <li class="navbar-item">Araçlar</li>
+                </a>
+                <a href="bakimlar.html">
+                    <li class="navbar-item">Bakımlar</li>
+                </a>
+                <a href="tahminleme.html">
+                    <li class="navbar-item">Tahminleme</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="filter-container">
+            <label for="date-filter">Tarih Aralığı Seç:</label>
+            <select id="date-filter">
+                <option value="2022-01-01|2022-03-31">2022 Ocak - Mart</option>
+                <option value="2022-04-01|2022-06-30">2022 Nisan - Haziran</option>
+                <option value="2022-07-01|2022-09-30">2022 Temmuz - Eylül</option>
+                <option value="2022-10-01|2022-12-31">2022 Ekim - Aralık</option>
+                <option value="2023-01-01|2023-03-31">2023 Ocak - Mart</option>
+                <option value="2023-04-01|2023-06-30">2023 Nisan - Haziran</option>
+                <option value="2023-07-01|2023-09-30">2023 Temmuz - Eylül</option>
+                <option value="2023-10-01|2023-12-31">2023 Ekim - Aralık</option>
+                <option value="2024-01-01|2024-03-31">2024 Ocak - Mart</option>
+                <option value="2024-04-01|2024-06-30">2024 Nisan - Haziran</option>
+                <option value="2024-07-01|2024-09-30">2024 Temmuz - Eylül</option>
+                <option value="2024-10-01|2024-12-31">2024 Ekim - Aralık</option>
+            </select>
+
+            <label for="year-filter">Yıl Seç:</label>
+            <select id="year-filter">
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+            </select>
+        </div>
+
+        <div class="tables-container">
+
+            <table id="kiralananGunTable">
+                <thead>
+                    <tr>
+                        <th>Şube Adı</th>
+                        <th>Toplam Kiralanan Gün</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <table id="kiralamaGeliriTable">
+                <thead>
+                    <tr>
+                        <th>Şube Adı</th>
+                        <th>Kiralama Geliri (TL)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </main>
+
+
+    <script src="../js/adminSubeler.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Giriş</title>
+    <link rel="stylesheet" href="../css/adminGiris.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <img src="../images/avisLogo.png" alt="avisLogo">
+    <div class="login-container">
+        <h1>Admin Giriş</h1>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Kullanıcı Adı</label>
+                <input type="text" id="username" placeholder="Kullanıcı adınızı girin" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Şifre</label>
+                <input type="password" id="password" placeholder="Şifrenizi girin" required>
+            </div>
+            <button type="submit">Giriş Yap</button>
+            <p id="error-message" class="error-message"></p>
+        </form>
+    </div>
+    
+    <script src="../js/adminGiris.js"></script>
+
+</body>
+</html>

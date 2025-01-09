@@ -1,0 +1,408 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(to right, #a20e29, #AD0A27);
+}
+
+.header-top {
+    display: flex;
+    height: 72px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: 35px;
+}
+
+.logo img {
+    width: 120px;
+    height: 35px;
+}
+
+.logout {
+    margin-right: 50px;
+}
+
+.logout a {
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: #FF0134;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 12px 16px;
+    transition: background 0.3s;
+}
+
+.logout a:hover {
+    background-color: #d4002a;
+}
+
+.navbar {
+    background-color: #FF0134;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-items {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-items a {
+    text-decoration: none;
+}
+
+.navbar-item {
+    padding: 10px 30px;
+    margin: 0 20px;
+    list-style-type: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar-item:hover {
+    background-color: #d4002a;
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+.navbar-item.active {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.filter-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.filter-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Aradaki mesafeyi artırdım */
+}
+
+.filter-btn {
+    background-color: #FF0134;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 2px 0px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.filter-btn:hover {
+    background-color: #a20e29;
+    transform: scale(1.05);
+}
+
+.filter-btn.active {
+    background-color: #000;
+    color: white;
+    transform: scale(1.1);
+}
+
+.year-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Aradaki mesafeyi artırdım */
+    margin-top: 20px;
+}
+
+.year-btn {
+    background-color: #2A2A2A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.year-btn:hover {
+    background-color: #444444;
+    transform: scale(1.05);
+}
+
+.year-btn.active {
+    background-color: #000;
+    color: #FF0134;
+    transform: scale(1.1);
+}
+
+.summary-cards {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 10px 40px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+}
+
+.year-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.year-group h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.year-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* Aradaki mesafeyi artırdım */
+    margin-top: 20px;
+}
+
+.year-btn-group button {
+    background-color: #FF0134;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    min-width: 100px;
+    text-align: center;
+}
+
+.year-btn-group button:hover {
+    background-color: #a20e29;
+    transform: scale(1.05);
+}
+
+.year-btn-group button.active {
+    background-color: #000;
+    color: #FF0134;
+    transform: scale(1.1);
+}
+
+.grafikler {
+    margin: 20px 10px;
+}
+
+.grafik-basliklar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.grafik-basliklar h2 {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    flex: 1;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+canvas {
+    flex: 1;
+    max-width: 49%;
+    height: auto;
+    max-height: 400px;
+}
+
+.tables-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.table-container {
+    width: 48%;
+    margin: 20px 10px;
+}
+
+.table-container h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#commonCarsTable,
+#araclariGetir {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+#commonCarsTable th,
+#commonCarsTable td,
+#araclariGetir th,
+#araclariGetir td {
+    padding: 12px 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#commonCarsTable th,
+#araclariGetir th {
+    background-color: #f4f4f4;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#commonCarsTable td,
+#araclariGetir td {
+    background-color: #fff;
+    color: #555;
+}
+
+#commonCarsTable tr:hover td,
+#araclariGetir tr:hover td {
+    background-color: #f0f0f0;
+}
+
+#commonCarsTable td,
+#commonCarsTable th,
+#araclariGetir td,
+#araclariGetir th {
+    word-wrap: break-word;
+}
+
+#doviz {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.doviz-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.currency-box {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.currency-box h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.currency-box p {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.currency-box .rate {
+    font-size: 24px;
+    color: #e74c3c;
+}
+
+
+button:hover {
+    cursor: pointer;
+}
+
+#profit-section, #forecast-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#profit-section h3, #forecast-section h3 {
+    color: #333;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+#profits div {
+    background-color: #f9f9f9;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#profits div strong {
+    color: #FF0134;
+}
+
+#forecast-profit {
+    background-color: #fff8e1;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+#forecast-profit strong {
+    color: #FF0134;
+}

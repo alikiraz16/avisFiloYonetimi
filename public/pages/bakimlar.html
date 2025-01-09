@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakımlar</title>
+    <link rel="stylesheet" href="../css/bakimlar.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="adminPanel.html">
+                    <img src="../images/avisLogoWhite.png" alt="avisLogo">
+                </a>
+            </div>
+            <div class="logout">
+                <a href="adminGiris.html">Çıkış Yap</a>
+            </div>
+        </div>
+        <div class="navbar">
+            <ul class="navbar-items">
+                <a href="adminPanel.html">
+                    <li class="navbar-item">Anasayfa</li>
+                </a>
+                <a href="subeler.html">
+                    <li class="navbar-item">Şubeler</li>
+                </a>
+                <a href="araclar.html">
+                    <li class="navbar-item">Araçlar</li>
+                </a>
+                <a href="bakimlar.html">
+                    <li class="navbar-item">Bakımlar</li>
+                </a>
+                <a href="tahminleme.html">
+                    <li class="navbar-item">Tahminleme</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="section">
+            <h2>Tablolar</h2>
+            <div class="tables-section">
+                <div>
+                    <h3>Az Bakım - Az Masraf</h3>
+                    <table id="az-bakim-table">
+                        <thead>
+                            <tr>
+                                <th>Araç Model</th>
+                                <th>Yakıt Türü</th>
+                                <th>Toplam Bakım Sayısı</th>
+                                <th>Toplam Masraf</th>
+                                <th>Ortalama Masraf</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+    
+                <div>
+                    <h3>Çok Bakım - Çok Masraf</h3>
+                    <table id="cok-bakim-table">
+                        <thead>
+                            <tr>
+                                <th>Araç Model</th>
+                                <th>Yakıt Türü</th>
+                                <th>Toplam Bakım Sayısı</th>
+                                <th>Toplam Masraf</th>
+                                <th>Ortalama Masraf</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>Grafikler</h2>
+            <div class="charts-section">
+                <div class="chart-container">
+                    <h3>En Masraflı 20 Araç</h3>
+                    <canvas id="masrafliAracChart"></canvas>
+                </div>
+    
+                <div class="chart-container">
+                    <h3>Bakım Sayısı En Fazla 20 Araç</h3>
+                    <canvas id="bakimSayisiChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/adminBakimlar.js"></script>
+</body>
+</html>

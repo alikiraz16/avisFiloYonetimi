@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="../css/adminPanel.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="adminPanel.html">
+                    <img src="../images/avisLogoWhite.png" alt="avisLogo">
+                </a>
+            </div>
+            <div class="logout">
+                <a href="adminGiris.html">Çıkış Yap</a>
+            </div>
+        </div>
+        <div class="navbar">
+            <ul class="navbar-items">
+                <a href="adminPanel.html">
+                    <li class="navbar-item">Anasayfa</li>
+                </a>
+                <a href="subeler.html">
+                    <li class="navbar-item">Şubeler</li>
+                </a>
+                <a href="araclar.html">
+                    <li class="navbar-item">Araçlar</li>
+                </a>
+                <a href="bakimlar.html">
+                    <li class="navbar-item">Bakımlar</li>
+                </a>
+                <a href="tahminleme.html">
+                    <li class="navbar-item">Tahminleme</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="filter-section">
+            <h3>Tarih Seçiniz</h3>
+            <div id="filter-buttons" class="filter-buttons">
+                <!-- Tarih butonları JavaScript ile dinamik olarak eklenecek -->
+            </div>
+            <!-- Yıllık Filtreleme Butonları -->
+            <div class="year-buttons">
+                <button class="filter-btn year-btn" data-start="2021-01-01" data-end="2021-12-31">2021</button>
+                <button class="filter-btn year-btn" data-start="2022-01-01" data-end="2022-12-31">2022</button>
+                <button class="filter-btn year-btn" data-start="2023-01-01" data-end="2023-12-31">2023</button>
+                <button class="filter-btn year-btn" data-start="2024-01-01" data-end="2024-12-31">2024</button>
+                <button class="filter-btn year-btn" data-start="2021-01-01" data-end="2024-12-31">Toplam</button>
+            </div>
+        </section>
+
+        <div class="summary-cards">
+            <div class="card">
+                <h3>Toplam Kiralanan Gün</h3>
+                <p id="total-vehicles">Yükleniyor...</p>
+            </div>
+            <div class="card">
+                <h3>Toplam Kiralama Geliri</h3>
+                <p id="total-revenue">Yükleniyor...</p>
+            </div>
+            <div class="card">
+                <h3>Toplam Bakım Masrafı</h3>
+                <p id="total-expenses">Yükleniyor...</p>
+            </div>
+        </div>
+
+        <section class="grafikler">
+            <div class="grafik-basliklar">
+                <h2>Çok Bakım - Az Masraf</h2>
+                <h2>En Çok Kiralanan 20 Araç</h2>
+            </div>
+            <div class="chart-container">
+                <canvas id="maintenanceCarsChart"></canvas>
+                <canvas id="rentedCarsChart"></canvas>
+            </div>
+        </section>
+
+
+        <section class="grafikler">
+            <div class="grafik-basliklar">
+                <h2>Az Bakım - Çok Masraf</h2>
+                <h2>En Az Kiralanan 20 Araç</h2>
+            </div>
+            <div class="chart-container">
+                <canvas id="topCostLowMaintenanceCarsChart"></canvas>
+                <canvas id="bottomRentedCarsChart"></canvas>
+            </div>
+        </section>
+
+
+        <div class="tables-container">
+            <div class="table-container">
+                <h3>Az Masraflı Çok Kiralanan Ortak Araçlar</h3>
+                <table id="commonCarsTable" border="1">
+                    <thead>
+                        <tr>
+                            <th>Araç ID</th> 
+                            <th>Araç Modeli (Yakıt Türü)</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Ortak araçlar burada dinamik olarak gösterilecek -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>Çok Masraflı Az Kiralanan Ortak Araçlar</h3>
+                <table id="araclariGetir" border="1">
+                    <thead>
+                        <tr>
+                            <th>Araç ID</th> <!-- ID için sütun, sol tarafta -->
+                            <th>Araç Modeli (Yakıt Türü)</th> <!-- Model ve yakıt türü için sütun -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Ortak araçlar burada dinamik olarak gösterilecek -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <h1 id="doviz">Döviz Kurları</h1>
+        <div class="doviz-container">
+            <div class="currency-box">
+                <h3>Dolar (USD) - TL</h3>
+                <p id="usd-try" class="rate">Loading...</p>
+            </div>
+        
+            <div class="currency-box">
+                <h3>Euro (EUR) - TL</h3>
+                <p id="eur-try" class="rate">Loading...</p>
+            </div>
+        
+            <div class="currency-box">
+                <h3>Dolar (USD) - Euro (EUR)</h3>
+                <p id="usd-eur" class="rate">Loading...</p>
+            </div>
+        </div>
+
+
+        
+        <section class="input-section">
+            <h3>Aracın ID'sini ve Döviz Kurunu Seçiniz</h3>
+        
+            <label for="car-id">Araç Seçiniz:</label>
+            <select id="car-id">
+                <!-- Araçlar burada dinamik olarak gösterilecek -->
+            </select>
+        
+            <label for="usd-rate">Dolar Kuru (TL):</label>
+            <input type="number" id="usd-rate" placeholder="40" step="0.01" required>
+        
+            <button id="calculate-btn">Kar Hesapla</button>
+        </section>
+
+        
+        <section id="profit-section">
+            <h3>Yıllık Kar Durumu</h3>
+            <div id="profits"></div>
+        </section>
+        
+        <section id="forecast-section">
+            <h3>2025 Yılı Tahmini Kar</h3>
+            <div id="forecast-profit"></div>
+        </section>
+
+
+    </main>
+
+    <script src="../js/adminPanel.js"></script>
+</body>
+
+</html>

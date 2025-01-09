@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahminleme</title>
+    <link rel="stylesheet" href="../css/tahminleme.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="adminPanel.html">
+                    <img src="../images/avisLogoWhite.png" alt="avisLogo">
+                </a>
+            </div>
+            <div class="logout">
+                <a href="adminGiris.html">Çıkış Yap</a>
+            </div>
+        </div>
+        <div class="navbar">
+            <ul class="navbar-items">
+                <a href="adminPanel.html">
+                    <li class="navbar-item">Anasayfa</li>
+                </a>
+                <a href="subeler.html">
+                    <li class="navbar-item">Şubeler</li>
+                </a>
+                <a href="araclar.html">
+                    <li class="navbar-item">Araçlar</li>
+                </a>
+                <a href="bakimlar.html">
+                    <li class="navbar-item">Bakımlar</li>
+                </a>
+                <a href="tahminleme.html">
+                    <li class="navbar-item">Tahminleme</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <label for="arac-secimi">Aracınızı Seçin:</label>
+        <select id="arac-secimi">
+            <option value="">Araç Seçin</option>
+        </select>
+    
+        <div class="tablo-container">
+            <table id="kiralama-tablosu">
+                <thead>
+                    <tr>
+                        <th>Yıl</th>
+                        <th>Kiralanan Gün Sayısı</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2021</td>
+                        <td id="2021-gun-sayisi"></td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td id="2022-gun-sayisi"></td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td id="2023-gun-sayisi"></td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td id="2024-gun-sayisi"></td>
+                    </tr>
+                    <tr>
+                        <td>2025 (Tahmin)</td>
+                        <td id="2025-tahmin"></td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <table id="bakim-masrafi-tablosu">
+                <thead>
+                    <tr>
+                        <th>Yıl</th>
+                        <th>Bakım Masrafı</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2021</td>
+                        <td id="2021-masraf"></td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td id="2022-masraf"></td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td id="2023-masraf"></td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td id="2024-masraf"></td>
+                    </tr>
+                    <tr>
+                        <td>2025 (Tahmin)</td>
+                        <td id="2025-masraf"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </main>
+
+    <script src="../js/adminTahminleme.js"></script>
+</body>
+
+</html>
